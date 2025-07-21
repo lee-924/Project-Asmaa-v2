@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&family=Playpen+Sans+Arabic:wght@100..800&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+    
+   
+}
+
+body {
+    background-image:radial-gradient(#0c0269,#07004d);
+}
+
+body::-webkit-scrollbar {
+  display: none;                /* For Chrome, Edge, Safari */
+}
+
+/* HEADER |||||||||| */
+header {
+    padding: 0;
+    margin : 0;
+    height : 200px;
+    display: flex;
+    justify-content: center;
+    align-items:center; 
+}
+
+header h1 {
+    text-align: center;
+}
+
+.time, .date {
+    position: absolute;
+    border-radius: 10px;
+    border:2px solid black;
+    padding: 5px;
+    top: 30px;
+    font-size: 17px;
+    font-family: monospace;
+    font-weight: 500;
+}
+.time {left:  100px;}
+.date {right: 100px;}
+
+
+
+/* PROFILE PICTURE/TEXT */
+.profile {
+    border: 2px solid white;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.profile:hover {
+    border: 4px solid white;
+}
+
+.her {
+    font-family: 'Noto Naskh Arabic', cursive;
+   
+}
+.her:hover {
+    text-decoration: 2px underline white;
+    
+}
+
+
+/* BOXES AND CONTAINER (MAIN AREA) */
+
+main {
+    height: 150vh;
+}
+
+.container {
+    padding: 25px;
+    padding-top: 100px;
+    margin: 0;
+    height: 100vh;
+    width: 95vw;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display:grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 150px 150px;
+    grid-gap: 50px;
+    grid-template-areas: 
+    'ab cd ef'
+    "gh ij kl"
+    "mn op qr";
+}
+
+.container :hover {
+    border: solid white;
+    cursor: pointer;
+}
+
+
+
+/* DIVS AND ICONS  GENERAL !! */
+a, .icon-text {
+    background-color:#0c0269 ;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+a {
+    height: 145px;
+    width: 245px;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.svg-icon {
+    height: 50px;
+    width: 50px;
+    background-color:#0c0269 ;
+    margin: 5px;
+    
+}
+
+
+/* BOXES !!*/
+.box {
+    border: solid black;
+    border-radius: 10px;
+    width: 250px;
+    height: 150px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box :hover {
+    border: solid  #0c0269 ;
+}
+
+
+#box1 {
+    grid-area: ab;
+    background: #0c0269;
+}
+
+
+
+#box2{
+    grid-area: cd;
+    background: #0c0269;
+}
+
+#box3 {
+    grid-area: ef;
+    background: #0c0269;
+}
+#box4 {
+     grid-area: gh;
+    background: #0c0269;
+}
+#box5 {
+     grid-area: ij;
+    background: #0c0269;
+}
+#box6 {
+     grid-area: kl;
+    background: #0c0269;
+}
+#box7 {
+     grid-area: op;
+    background: #0c0269;
+}
+
+
+/* MADE BY LEE / CREDIT   */
+
+.credit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    font-family: 'Share Tech Mono', monospace;
+    cursor: pointer;
+}
+.credityap {
+    position: absolute;
+    top: 80px;
+    margin: 10px;
+    text-align: center;
+
+}
+.creditdiv {
+    display: none;
+    position: fixed;
+    top: 35%;
+    left:35%;
+    padding:15px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 300px;
+    width: 500px;
+}
+
+.close {
+    position: absolute;
+    height: 20px;
+    width: 80px;
+    margin: 5px;
+    right:0px;
+    background-color: rgb(195, 2, 2);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.close:hover {
+    border: 2px solid white;
+    background-color: red;
+    cursor: pointer;
+}
+

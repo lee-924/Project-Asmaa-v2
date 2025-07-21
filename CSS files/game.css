@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Marck+Script&family=Noto+Naskh+Arabic:wght@400..700&family=Playpen+Sans+Arabic:wght@100..800&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Marck+Script&family=Noto+Naskh+Arabic:wght@400..700&family=Playpen+Sans+Arabic:wght@100..800&family=Silkscreen:wght@400;700&family=VT323&display=swap');
+
+
+* {
+    padding:0;
+    margin:0;
+    font-family: 'Audiowide', cursive;
+}
+
+body {
+    color: white;
+    background-color: #121113;
+    height: 700vh;
+
+}
+
+/* HEADER */
+.intro {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+/* MAIN BODY */
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.startThing {
+    font-family: 'VT323' ;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+}
+.startBtn {
+    margin: 50px;
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    border-radius:10px;
+    border: 3px solid black;
+}
+.startBtn:hover {
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.loadingScreen {
+    margin: 100px;
+}
+
+.fix {
+    display: none;
+}
+.reset {
+    height:50px;
+    width:120px;
+    border:2px solid black;
+    border-radius: 10px;
+    color: white;
+    background-color: darkred;
+}
+.reset:hover {
+    cursor:pointer;
+    color:white;
+    background-color: black;
+    border:2px solid white;
+}
+
+/* POPUP */
+.popup {
+    display: none;
+    background: black;
+    height:300px;
+    width:500px;
+    border-radius:10px;
+    border: 2px solid white;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+.popupDiv {
+    position:relative;
+    height:300px;
+    width:500px; 
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.popupTitle {
+    position:absolute;
+    left:50%;
+    transform: translate(-50%,-50%);
+    margin: 20px;
+}
+.popupYap {
+    position:absolute;
+    top:50px;
+    left:5px;
+    margin: 10px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.Btn {
+    position:absolute;
+    margin:10px;
+    height:30px;
+    width: 150px;
+    text-align:center;
+    border:2px solid white;
+    border-radius: 5px;
+}
+.Btn:hover {
+    color:white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.closePopup {
+    bottom:20px;
+    left: 50px;
+    background: rgb(232, 5, 5);
+}
+
+.accept {
+    bottom: 20px;
+    right: 50px;
+    background: green;
+}

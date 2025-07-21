@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&family=Playpen+Sans+Arabic:wght@100..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Marck+Script&family=Noto+Naskh+Arabic:wght@400..700&family=Playpen+Sans+Arabic:wght@100..800&family=Silkscreen:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image:radial-gradient(#410B13,#390303);
+    height: auto;
+}
+body::-webkit-scrollbar {
+  display: none;                /* For Chrome, Edge, Safari */
+}
+
+/* HEADER AREA */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+.bdaybox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.cake {
+    height: 100px;
+    width: 300px;
+    color: white;
+}
+
+.bday {
+    color: white;
+    font-family: 'Playpen Sans Arabic';
+    font-size: 30px;
+}
+
+/* MAIN BODY */
+main {
+    display:flex;
+    justify-content: center;
+}
+.blackbox {
+    margin:10px;
+    padding:50px;
+    width: 100vw;
+    background-color: #150909;
+    border-radius: 50px;
+    border:1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    animation-name: expand;
+    animation-play-state: paused;
+    animation-duration: 25s;
+    animation-fill-mode: forwards;
+}
+@keyframes expand {
+    0% {height:60vh;}
+    90%{height:500vh;}
+    100%{height:auto;}
+    
+}
+.lol {
+    color:white;
+    font-family:'Playpen Sans Arabic' ;
+    text-align: center;
+
+}
+
+.reveal {
+    border:2px solid white;
+    background-color: #370404;
+    color: white;
+    font-family: 'monochrome',cursive;
+    font-size: 20px;
+    border-radius: 10px;
+    height: 40px;
+    width: 500px;
+}
+.reveal:hover {
+    border:2px solid rgb(234, 89, 106);
+    background-color: rgb(216, 11, 0);
+    color: black;
+    cursor: pointer;
+}
+
+.poem {
+    color: white;
+    font-family: 'Marck Script', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    display: none;
+    animation-name:poems;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    animation-duration: 2s;
+}
+
+@keyframes poems {
+    0%{opacity:0;}
+    50%{opacity:0.6;}
+    100%{opacity:1;}
+    
+}
+
+.loading {
+    color: white;
+    font-family: 'Playpen Sans Arabic';
+    font-size: 1.5rem;
+    animation-name: title;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.title {
+    color: white;
+    text-align:center;
+    text-decoration: 1px solid underline;
+    font-size: 2rem;
+    font-family: 'Marck Script', cursive;
+}
+
+@keyframes title {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1.5;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+/* FOOTER */
+footer {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.foot {
+display: none;
+color: white;
+text-align: center;
+font-family: 'monochrome';
+font-size: 16px;
+font-weight: 500;
+}
+
+.preFoot {
+    line-height: 30px;
+}

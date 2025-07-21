@@ -1,0 +1,48 @@
+/* Home and Settings button */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    border-radius: 50%;
+    border: 1px solid black;
+    height:45px;
+    width: 45px;
+    top: 20px;
+    left: 15px;
+    z-index: 1;
+
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    height: 35px;
+    width: 35px;
+}
+
+.icon:hover {
+    border: 1.5px solid white;
+}
+
+
+.setting {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    top: 20px;
+    right: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
