@@ -4,6 +4,7 @@ confirm.addEventListener('click',() => {
     
 
     if (input === "Asmaa") {
+    document.querySelector('.empty').value = ''
     document.querySelector('.startAudio').play()
     confirmclick()
     setTimeout(() => {
@@ -32,8 +33,7 @@ confirm.addEventListener('click',() => {
     }
     else {
         alert("Wrong password")
-        let input = document.querySelector('.empty').value = "";
-        
+        document.querySelector('.empty').value = '';
     }
    
     }) 

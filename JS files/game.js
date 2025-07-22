@@ -44,7 +44,7 @@ let accept = document.querySelector('.accept')
 accept.addEventListener('click',() => {
     aud3.play()
     setTimeout(() => {
-    window.open('bday.html')
+    window.location.href= 'maingame.html';
     },3000)
    
 })

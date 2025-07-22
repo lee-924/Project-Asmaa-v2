@@ -19,3 +19,5 @@ function close(creditdiv) {
     let close = document.querySelector('.close');
     close.addEventListener('click',() => {
     creditdiv.style.display = 'none';  })}
+
+

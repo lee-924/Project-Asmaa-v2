@@ -221,7 +221,7 @@ a {
     border-radius: 10px;
 }
 
-.close:hover {
+.close:hover{
     border: 2px solid white;
     background-color: red;
     cursor: pointer;
