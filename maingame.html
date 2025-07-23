@@ -53,42 +53,68 @@
     </header>
     <main>
       <section class="gameArea">
-        <h1>MEMORY: RECOVERY MODE</h1>
-        <div class="first">
-          <p class="g">
-            WHICH OF THESE IS LIKELY TO BE USED THE MOST IN THE CHAT?
-          </p>
-          <img class="img og" src="pictures/babyGif.PNG" alt="babyGif" />
-          <img class="img fk" src="pictures/fakeOne.jpeg" alt="cat" />
-          <img class="img fk2" src="pictures/fakeTwo.PNG" alt="apple" />
-        </div>
-        <div class="firstAns">
-          <button class="Btn F1">First</button>
-          <button class="Btn fail F2">Second</button>
-          <button class="Btn fail F3">Third</button>
-        </div>
+        <section class="sec1">
+          <h1 class="title">MEMORY: RECOVERY MODE</h1>
+          <div class="first">
+            <p class="g">
+              WHICH OF THESE IS LIKELY TO BE USED THE MOST IN THE CHAT?
+            </p>
+            <img class="img og" src="pictures/babyGif.PNG" alt="babyGif" />
+            <img class="img fk" src="pictures/fakeOne.jpeg" alt="cat" />
+            <img class="img fk2" src="pictures/fakeTwo.PNG" alt="apple" />
+          </div>
+          <div class="firstAns">
+            <button class="Btn F1">First</button>
+            <button class="Btn fail F2">Second</button>
+            <button class="Btn fail F3">Third</button>
+          </div>
+        </section>
+
+        <section class="sec2">
+          <p class="g">CORRECT THE FOLLOWING IMAGES IN THIER RIGHT ORDER:</p>
+          <div class="puzzle">
+            <div class="drag" id="one" draggable="true">1</div>
+            <div class="drag" id="two" draggable="true">2</div>
+            <div class="drag" id="three" draggable="true">3</div>
+            <div class="drag" id="four" draggable="true">4</div>
+            <div class="drag" id="five" draggable="true">5</div>
+          </div>
+          <button class="finalOrder">Confirm</button>
+        </section>
       </section>
     </main>
+
+    <!-- ADDITIONALS -->
+    <section class="audio">
+      <audio class="correctSound" src="audio/correct.wav"></audio>
+      <audio class="error" src="audio/error.wav"></audio>
+    </section>
     <div class="settingDiv">
       <pre class="setyap">
 uhh didnt really had time to add anything here
 will add something later 😭😭</pre
       >
+      <button class="scrollup">SCROLL TO TOP</button>
       <a href="index.html" class="introBtn">Back to Intro Page</a>
       <button class="close2">close</button>
     </div>
     <section>
       <div class="reset">
-        <p>MEMORY RECOVERY FAILED!!</p>
+        <pre class="resetYap">
+MEMORY RECOVERY FAILED!!
+
+You have entered a wrong piece of memory.
+This will completley corrupt the full memory file.
+you have to complete the entire thing again.
+you may try again...but be more careful!
+
+(click settings to scroll up to the top again.)
+</pre
+        >
         <button class="restart">restart</button>
-        <button class="cancel">cancel</button>
       </div>
     </section>
-    <section class="audio">
-      <audio class="correctSound" src="audio/correct.wav"></audio>
-      <audio class="error" src="audio/error.wav"></audio>
-    </section>
-    <script src="JS files/homebutton.js"></script>
-    <script src="JS files/maingame.js"></script>
   </body>
+  <script src="JS files/homebutton.js"></script>
+  <script src="JS files/maingame.js"></script>
 </html>
