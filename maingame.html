@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>MemoryRecovery</title>
     <link rel="stylesheet" href="CSS files/maingame.css" />
     <link rel="stylesheet" href="CSS files/homebutton.css" />
   </head>
@@ -71,23 +71,59 @@
         </section>
 
         <section class="sec2">
-          <p class="g">CORRECT THE FOLLOWING IMAGES IN THIER RIGHT ORDER:</p>
           <div class="puzzle">
-            <div class="drag" id="one" draggable="true">1</div>
-            <div class="drag" id="two" draggable="true">2</div>
-            <div class="drag" id="three" draggable="true">3</div>
-            <div class="drag" id="four" draggable="true">4</div>
-            <div class="drag" id="five" draggable="true">5</div>
+            <p class="g">ORGANISE THE FOLLOWING IMAGE IN THE CORRECT ORDER:</p>
+            <img
+              class="drag"
+              id="two"
+              draggable="true"
+              src="pictures/second.jpg"
+              alt="lol"
+            />
+            <img
+              class="drag"
+              id="five"
+              draggable="true"
+              src="pictures/fifth.jpg"
+              alt="lol"
+            />
+
+            <img
+              class="drag"
+              id="four"
+              draggable="true"
+              src="pictures/fourth.jpg"
+              alt="lol"
+            />
+            <img
+              class="drag"
+              id="one"
+              draggable="true"
+              src="pictures/first.jpg"
+              alt="lol"
+            />
+            <img
+              class="drag"
+              id="three"
+              draggable="true"
+              src="pictures/third.jpg"
+              alt="lol"
+            />
+            <p class="g">you have 3 tries only.</p>
+            <button class="finalOrder">Confirm</button>
           </div>
-          <button class="finalOrder">Confirm</button>
         </section>
       </section>
     </main>
 
     <!-- ADDITIONALS -->
     <section class="audio">
-      <audio class="correctSound" src="audio/correct.wav"></audio>
-      <audio class="error" src="audio/error.wav"></audio>
+      <audio
+        class="correctSound"
+        src="audio/correct.wav"
+        preload="auto"
+      ></audio>
+      <audio class="error" src="audio/error.wav" preload="auto"></audio>
     </section>
     <div class="settingDiv">
       <pre class="setyap">

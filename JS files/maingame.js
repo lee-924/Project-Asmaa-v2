@@ -3,9 +3,12 @@ let f1 = document.querySelector('.F1')
  let reset = document.querySelector('.reset')
 let correctAudio = document.querySelector('.correctSound')
 let error = document.querySelector('.error')
+let body = document.querySelector('body')
 f1.addEventListener('click',() => {
     correctAudio.play()
-    bar.style.animationName = 'prog2'
+    score[0].comp = true;
+    store(score)
+    
 })
 
  document.querySelectorAll('.fail').forEach(test2 => {
@@ -15,23 +18,17 @@ test2.addEventListener('click',() => {
 })
 
 function failed() {
-    document.querySelector('body').style.backgroundColor = 'darkred';
+    body.style.backgroundColor = 'darkred';
     error.play()
-    let progress = document.querySelector('.progress')
-    progress.style.backgroundColor = 'red'
-    progress.style.animationDuration = '1s';
-    progress.style.animationName = 'final'
+    bar.style.backgroundColor = 'red'
     reset.style.display = 'flex'
+    bar.style.width = '400px'
 }
 let restart = document.querySelector('.restart')
 
 restart.addEventListener('click', () => {
-    
-    alert("Memory further corrupted...restarting recovery.")
-    location.reload()
-    window.scrollTo({
-      top: 200, 
-      behavior: 'smooth' })
+    resetGame()
+   
     }
     
 )
@@ -85,6 +82,8 @@ return dragEle.reduce((closest,child) => {
 document.querySelector('.finalOrder').addEventListener('click', () => {
     if (sorting()) {
         correctAudio.play()
+        score[1].comp = true;
+        store(score)
         bar.style.animationName = 'prog3'
     }
     else {
@@ -118,3 +117,64 @@ scrollUp.addEventListener('click',() => {
       top: 0, 
       behavior: 'smooth' })
     })
+
+
+let score = [
+{firstGame: 'MCQ',
+    comp: false
+},
+{secondGame: 'SORTING PUZZLE',
+    comp: false},
+{thirdGame: 'idk',
+    comp: false},
+{fourthGame: 'idk',
+    comp: false},
+{fifthGame: 'idk',
+    comp: false}
+]
+store(score)
+
+function resetGame() {
+let scorer = [
+{firstGame: 'MCQ',
+    comp: false
+},
+{secondGame: 'SORTING PUZZLE',
+    comp: false},
+{thirdGame: 'idk',
+    comp: false},
+{fourthGame: 'idk',
+    comp: false},
+{fifthGame: 'idk',
+    comp: false}
+]
+store(scorer)
+reset.style.display = 'none'
+body.style.backgroundColor = '#111';
+bar.style.backgroundColor = 'lime'
+ window.scrollTo({
+      top:0, 
+      behavior: 'smooth' })
+setTimeout(() => {location.reload()},2000)
+    }
+
+
+
+function storage() {
+    let scorer = JSON.parse(localStorage.getItem('scores'))
+    let scorePoint = 0;
+    console.log(scorer)
+    scorer.forEach((index) => {
+            if (index.comp) {
+                console.log("true")
+             scorePoint += 1 }  }) 
+   bar.style.width = `${scorePoint*80}px` }
+
+   /* if (scorePoint === 5) {
+    WINNING SCREEN HERE
+   } */
+
+function store(score) {
+    localStorage.setItem('scores',JSON.stringify(score))
+    storage()
+}
