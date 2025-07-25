@@ -53,8 +53,8 @@
     </header>
     <main>
       <section class="gameArea">
+        <h1 class="title">MEMORY: RECOVERY MODE</h1>
         <section class="sec1">
-          <h1 class="title">MEMORY: RECOVERY MODE</h1>
           <div class="first">
             <p class="g">
               WHICH OF THESE IS LIKELY TO BE USED THE MOST IN THE CHAT?
@@ -113,16 +113,56 @@
             <button class="finalOrder">Confirm</button>
           </div>
         </section>
+
+        <section class="sec3">
+          <div class="guessing">
+            <p class="g">GUESS THE WORD</p>
+            <p class="hint"></p>
+            <input class="guess" type="text" />
+            <button class="guessBtn">guess</button>
+          </div>
+        </section>
+
+        <section class="sec4">
+          <div class="truthAndLie">
+            <p class="g">ONE TRUTH TWO LIES. SELECT THE TRUTH</p>
+            <p class="g result4"></p>
+            <button class="truthBtn falsy">
+              Its been 7 months since we have been friends.
+            </button>
+            <button class="truthBtn falsy">
+              The "cray cray" joke was made by me
+            </button>
+            <button class="truthBtn truth">
+              This friendship will never end.
+            </button>
+          </div>
+        </section>
+
+        <section class="sec5">
+          <div class="rapidStart">
+            <p class="g">Rapid Fire Questions</p>
+            <p class="g warning">
+              you have 15 seconds to answer all the questions after you press
+              start.
+            </p>
+            <button class="startBtn">start</button>
+          </div>
+
+          <div class="rapidFire">
+            <p class="g timer">.</p>
+            <p class="g rapidQuestion">question 1</p>
+            <div class="answerBox">
+              <button class="ch1 correctAnswer">choice 1</button>
+              <button class="ch2 correctAnswer">choice 2</button>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
 
     <!-- ADDITIONALS -->
     <section class="audio">
-      <audio
-        class="correctSound"
-        src="audio/correct.wav"
-        preload="auto"
-      ></audio>
       <audio class="error" src="audio/error.wav" preload="auto"></audio>
     </section>
     <div class="settingDiv">
@@ -139,12 +179,11 @@ will add something later 😭😭</pre
         <pre class="resetYap">
 MEMORY RECOVERY FAILED!!
 
+
 You have entered a wrong piece of memory.
 This will completley corrupt the full memory file.
 you have to complete the entire thing again.
 you may try again...but be more careful!
-
-(click settings to scroll up to the top again.)
 </pre
         >
         <button class="restart">restart</button>

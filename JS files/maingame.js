@@ -1,11 +1,10 @@
 let f1 = document.querySelector('.F1')
  let bar = document.querySelector('.progress')
  let reset = document.querySelector('.reset')
-let correctAudio = document.querySelector('.correctSound')
 let error = document.querySelector('.error')
 let body = document.querySelector('body')
 f1.addEventListener('click',() => {
-    correctAudio.play()
+    CorrectSound()
     score[0].comp = true;
     store(score)
     
@@ -81,10 +80,9 @@ return dragEle.reduce((closest,child) => {
 
 document.querySelector('.finalOrder').addEventListener('click', () => {
     if (sorting()) {
-        correctAudio.play()
+        CorrectSound()
         score[1].comp = true;
         store(score)
-        bar.style.animationName = 'prog3'
     }
     else {
         alert("wrong order")
@@ -125,12 +123,10 @@ let score = [
 },
 {secondGame: 'SORTING PUZZLE',
     comp: false},
-{thirdGame: 'idk',
+{thirdGame: 'GuessingWord',
     comp: false},
-{fourthGame: 'idk',
+{fourthGame: 'TwoLiesOneTruth',
     comp: false},
-{fifthGame: 'idk',
-    comp: false}
 ]
 store(score)
 
@@ -141,12 +137,11 @@ let scorer = [
 },
 {secondGame: 'SORTING PUZZLE',
     comp: false},
-{thirdGame: 'idk',
+{thirdGame: 'GuessingWord',
     comp: false},
-{fourthGame: 'idk',
+{fourthGame: 'TwoLiesOneTruth',
     comp: false},
-{fifthGame: 'idk',
-    comp: false}
+
 ]
 store(scorer)
 reset.style.display = 'none'
@@ -168,7 +163,7 @@ function storage() {
             if (index.comp) {
                 console.log("true")
              scorePoint += 1 }  }) 
-   bar.style.width = `${scorePoint*80}px` }
+   bar.style.width = `${scorePoint*92}px` }
 
    /* if (scorePoint === 5) {
     WINNING SCREEN HERE
@@ -177,4 +172,217 @@ function storage() {
 function store(score) {
     localStorage.setItem('scores',JSON.stringify(score))
     storage()
+}
+
+/* THIRD GAME */
+let guessBtn = document.querySelector('.guessBtn')
+let guessBox = document.querySelector('.guess')
+let hint = document.querySelector('.hint')
+let clickCount = 0;
+guessBtn.addEventListener('click', () => {
+    clickCount += 1;
+    let value = guessBox.value
+    console.log(value)
+    let val = value.toLowerCase().replaceAll(" ", ""); 
+    console.log(val)
+    if (val === 'ducklingarmy') {
+        CorrectSound()
+        let p = 'CORRECT WORD!!'
+        hint.innerHTML = p;
+        score[2].comp = true;
+        store(score)
+
+    }
+    else {
+        if (clickCount === 1) {
+        let p = 'Hint: its an army'
+        hint.innerHTML = p; }
+        else if (clickCount === 2) {
+            let p = "Another hint: it starts with D"
+            hint.innerHTML = p }
+        else if (clickCount === 3) {
+            let p = "Another hint: Quack Quack"
+            hint.innerHTML = p;
+        }
+        else {
+            clickCount = 0;
+            failed()
+        }
+
+}
+    guessBox.value = ''
+   
+})
+
+/* FOURTH GAME */
+let truthy = document.querySelector('.truth')
+let rest = document.querySelector('.result4')
+truthy.addEventListener('click',() => {
+    rest.style.color = 'lime'
+    rest.innerHTML = 'CORRECT!!'
+    CorrectSound()
+    score[3].comp = true;
+    store(score)
+    
+})
+
+let falsy = document.querySelectorAll('.falsy')
+falsy.forEach((ind) => {
+    ind.addEventListener('click', () => {
+    rest.style.color = 'red'
+    rest.innerHTML = 'WRONG!!'
+    setTimeout(() => {
+    failed()
+    },1000)
+    
+})
+})
+
+/* FIFTH GAME || RAPID FIRE */
+let rapid = document.querySelector('.rapidStart')
+let rapidP = document.querySelector('.warning')
+let rapidStartBtn = document.querySelector(".startBtn") 
+let rapidFire = document.querySelector('.rapidFire')
+
+rapidStartBtn.addEventListener('click', () => {
+    let lastCount = 0
+    score.forEach((ind) => {
+        if (ind.comp) {
+            lastCount += 1
+        }
+    })
+    
+    if (lastCount===4) {
+        lastCount = 0;
+        startRapidGame()
+    }
+    else
+    rapidP.innerHTML = `FINISH THE PREVIOUS GAMES BEFORE PLAYING THIS`
+}) 
+
+function startRapidGame() {
+    rapidStartBtn.style.display = 'none'
+    let counter = [5,4,3,2,1]
+    counter.forEach((ind,i) => {
+        setTimeout(() => {
+            rapidP.innerHTML = ind
+        },i*1000)
+    })
+    setTimeout(() => {
+    rapid.style.display = 'none'
+    rapidFire.style.display = 'flex'
+    let ansCount = 0;
+    rapidFired(ansCount)
+    timer()
+    },5000) }
+
+let ansCount = 0;
+let set1 = [0, 2, 3, 5, 8];
+let set2 = [1, 4, 6, 7, 9];
+let currentCorrect = ''; // Will store 'ch1' or 'ch2'
+
+let ch1 = document.querySelector('.ch1');
+let ch2 = document.querySelector('.ch2');
+let question = document.querySelector('.rapidQuestion');
+
+function rapidFired(count) {
+  // Set the correct answer
+  if (set1.includes(count)) {
+    currentCorrect = 'ch1';
+  } else if (set2.includes(count)) {
+    currentCorrect = 'ch2';
+  }
+
+  // Update visual classes (optional)
+  ch1.classList.remove('correct', 'wrong');
+  ch2.classList.remove('correct', 'wrong');
+  
+  if (currentCorrect === 'ch1') ch1.classList.add('correct');
+  else ch2.classList.add('correct');
+
+  // (Optional) Update question text here too
+  let questions = [
+  "What is my name?",
+  "What is your favorite color?",
+  "Do I prefer cats or dogs?",
+  "Am I a good friend?",
+  "Whose my best friend?",
+  "Are you happy with this gift?",
+  "When did we first talk?",
+  "What’s my go-to emoji?",
+  "uhh click one randomly",
+  "Which ex do you prefer more?"
+];
+
+let answerSets = [
+  { first: "Lee", second: "Abdullah" },
+  { first: "Blue", second: "Red" },
+  { first: "Cats", second: "Dogs" },
+  { first: "yes", second: "no" },
+  { first: "Everyone else", second: "Asmaa" },
+  { first: "yes very much", second: "I dont care" },
+  { first: "many days ago", second: "Exactly 300 days ago" },
+  { first: "😐", second: "😭" },
+  { first: "that one", second: "this one" },
+  { first: "Bush", second: "First ex" }
+];
+
+question.innerHTML = questions[count]
+ch1.innerHTML = answerSets[count].first
+ch2.innerHTML = answerSets[count].second
+}
+
+function handleClick(choice) {
+  if (choice === currentCorrect) {
+    CorrectSound();
+    ansCount += 1;
+    if (ansCount === 10) {
+        ansCount = 0;
+        console.log("finiahed")
+        COMPLETED()
+        return
+    }
+    rapidFired(ansCount);
+  } else {
+    question.innerHTML = 'WRONG!!'
+    question.style.color = 'red';
+    setTimeout(() => {
+        failed()
+    },1000) 
+  }
+}
+
+// Only add event listeners once
+ch1.addEventListener('click', () => handleClick('ch1'));
+ch2.addEventListener('click', () => handleClick('ch2'));
+
+// Start the first round
+rapidFired(ansCount);
+
+function timer() {
+
+let timer = document.querySelector('.timer')
+let timerSet = [15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,'TIME OUTTTT']
+timerSet.forEach((ind,i) => {
+  setTimeout(() => {
+    timer.innerHTML = ind
+   },i*1000) 
+   setTimeout(() => {
+    failed()
+   },17000)
+})}
+
+
+
+function CorrectSound() {
+  const sound = new Audio("audio/CorrectReal.mp3");
+  sound.play();
+}
+
+function COMPLETED() {
+    rapidFire.style.display = 'none'
+    rapid.style.display = 'flex';
+    rapidStartBtn.style.display = 'block'
+    window.location.href = "home.html";
+    console.log('COMPLETED')
 }
