@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Marck+Script&family=Noto+Naskh+Arabic:wght@400..700&family=Playpen+Sans+Arabic:wght@100..800&family=Share+Tech+Mono&family=Silkscreen:wght@400;700&family=VT323&display=swap');
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'VT323', monospace;
+}
+
+body {
+    background-color: #111;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height:100px;
+    color:White;
+    font-size:45px;
+    padding:20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:White;
+}
+
+/* CONGRATS DIV  */
+.congratsBox {
+    color:white;
+    text-align: center;
+    border: 2px solid black;
+    padding:10px;
+    border-radius: 10px;
+   
+}
+
+.congratsBox:hover {
+    text-shadow: 0 0 5px rgb(255, 51, 129);
+    box-shadow: 0 0 10px rgb(170, 50, 6);
+    transition: 0.3s ease;
+
+}
+
+.heading {
+    font-size: 25px;;
+}
+
+.sub-head {
+    padding:10px
+}
+
+.discription {
+    margin:20px;
+    text-align: center;
+}
+
+.me {
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+}
+.me:hover {
+    cursor: pointer;
+    background-color: black;
+    border: 3px solid white;
+    color:White;
+    border-radius: 5px;
+}
+/* CLICK DIV */
+.clickDiv {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #1d1d1d;
+    color:White;
+    height:300px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px solid white;
+}
+
+.cancel {
+    position: absolute;
+    top:0px;
+    right:0px;
+    margin:10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: red;
+}
+
+.cancel:hover {
+    background-color: darkred;
+    cursor: pointer;
+}

@@ -383,6 +383,6 @@ function COMPLETED() {
     rapidFire.style.display = 'none'
     rapid.style.display = 'flex';
     rapidStartBtn.style.display = 'block'
-    window.location.href = "home.html";
+    window.location.href = "congrats.html";
     console.log('COMPLETED')
 }
