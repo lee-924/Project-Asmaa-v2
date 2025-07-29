@@ -43,7 +43,12 @@ header h1 {
 .date {right: 100px;}
 
 
-
+.comingSoon {
+    background-color: transparent;
+    border: transparent;
+    height:145px;
+    width:245px;
+}
 /* PROFILE PICTURE/TEXT */
 .profile {
     border: 2px solid white;

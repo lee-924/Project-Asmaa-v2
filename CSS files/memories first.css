@@ -97,6 +97,12 @@ main {
         'n1 n2'
         'o1 o2'
 }
+
+.mem p.memory:hover {
+    cursor: pointer;
+    font-weight: 800;
+    text-decoration: underline;
+}
 .mem p.time {
     text-decoration:1px underline white;
     font-size: 18px;
@@ -141,9 +147,7 @@ margin-right: 10px;
     height: 60px;
     position: relative;
 }
-.mem:hover {
-    cursor: pointer;
-}
+
 /* MEMORY BOXES ||| */
 #a1{grid-area: a1;}
 #b2{grid-area: b2;}
