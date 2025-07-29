@@ -1,5 +1,5 @@
 
-let a = JSON.parse(localStorage.getItem("memories"));
+
 let arm = [
     {
         "memory": "lee joins hideout.",
@@ -94,24 +94,9 @@ let arm = [
     
 ]
 
-if (Array.isArray(a)) {
-  if (a.length !== 0) {
 
-    final(a);
-  } 
-  else if (a.length === 0) {
-    a = arm
-    localStorage.setItem("memories", JSON.stringify(a));
-    final(a);
-  }}
-
-else {
   a = arm
-  localStorage.setItem("memories", JSON.stringify(a));
   final(a);
-} 
-;
-
 
 
 function final(a) {
@@ -140,7 +125,6 @@ resetInput.forEach(input => {
   input.value = "";
 });
   
-localStorage.setItem("memories",JSON.stringify(a)) 
 FINALE();}
 
 function FINALE() {
@@ -182,11 +166,10 @@ del.addEventListener("click", () => {
     g.style.display = 'none'
     a = []
     final(a)
-    localStorage.setItem("memories",JSON.stringify(a))
+
   }
   else{
- 
-  localStorage.setItem("memories",JSON.stringify(a))
+
  
   g.style.display = 'none'
   final(a) }
