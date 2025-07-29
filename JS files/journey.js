@@ -9,3 +9,13 @@ reveal.addEventListener('click', () => {
 cancel.addEventListener('click', () => {
     secretDiv.style.display = 'none'
 })
+
+let homeBtn = document.querySelector('.backToHome')
+homeBtn.addEventListener('click', () => {
+    window.location.href = 'home.html'
+})
+
+let done = document.querySelector('.IamDone')
+done.addEventListener('click', () => {
+    document.querySelector('.warningDiv').style.display = 'none'
+})
