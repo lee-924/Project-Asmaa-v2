@@ -1,24 +1,6 @@
-
 let a = JSON.parse(localStorage.getItem("memories"));
 let arm = [
-    {
-        "memory": "another memory of the day",
-        "time": "22:54",
-        "date": "2025-07-09",
-        "disc": "i love this one hahaha"
-    },
-    {
-        "memory": "new memories herer",
-        "time": "22:52",
-        "date": "2025-07-16",
-        "disc": "for example bla bla"
-    },
-    {
-        "memory": "fake ass memory",
-        "time": "12:08",
-        "date": "12-07-2025",
-        "disc": "i dont know"
-    }
+
 ] 
 
 if (Array.isArray(a)) {

@@ -41,11 +41,43 @@ header {
     text-decoration: underline;
 }
 
-.discription {
+.introduction .discriptions {
     position: absolute;
     top: 120px;
     width: 80%;
+    text-align: center;
+    color:White;
 }
+
+
+.lk {
+    position:fixed;
+    color:rgb(255, 255, 255);
+    margin:30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    font-size:13px;
+}
+
+.f {
+    top:0px;
+    left:50px;
+}
+
+.s {
+    top:0px;
+    left:150px;
+}
+.lk:hover {
+    cursor: pointer;
+    border: 2px solid white;
+    font-weight: 600;
+  
+}
+
+
 
 .addMem {
     display: flex;
@@ -72,6 +104,7 @@ header {
 .AddingBox {
     margin-bottom: 20px;
     border-radius: 8px;
+    color:white;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -215,44 +248,45 @@ margin-right: 10px;
 
 .memtime {
     position: absolute;
-    top: 30px;
+    top: 0px;
     margin: 10px;
-    font-size: 11px;
+    font-size: 15px;
+    text-decoration: underline;
 }
 
 .memtext {
     position: absolute;
-    top: 50px;
+    top: 35px;
     margin: 10px;
-    font-size: 12px;
-}
-.memtext:hover, .memtime {
-    text-decoration: underline;
+    font-size: 14px;
 }
 
 .delete {
     height: 30px;
-    width: 50px;
+    width: 100px;
     border-radius: 5px;
     margin: 10px;
+    bottom:0px;
     right:0px;
     position: absolute;
-    background-color: #ae2012;
+    background-color: #3d5a80;
     border:0px;
 
 }
 
 .exit {
+    position: absolute;
+    right: 0px;
     margin: 10px;
     height: 20px;
     width: 20px;
     border-radius: 5px;
-    background-color: #3d5a80;
+    background-color: #ae2012 ;
     border: 0px;
 }
 .exit:hover, .delete:hover {
     background-color: red;
-    border: 1px solid white;
+    border: 2px solid white;
     cursor:pointer;
 }
 
@@ -262,3 +296,4 @@ margin-right: 10px;
     background-color: black;
     display: none;
 }
+

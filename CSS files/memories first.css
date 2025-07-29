@@ -251,3 +251,31 @@ footer {
     cursor: pointer;
     color: blue;
 }
+
+.lk {
+    position:fixed;
+    color:rgb(255, 255, 255);
+    margin:30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    font-size:13px;
+}
+
+.f {
+    top:0px;
+    left:50px;
+}
+
+.s {
+    top:0px;
+    left:150px;
+}
+
+.lk:hover {
+    cursor: pointer;
+    border: 2px solid white;
+    font-weight: 600;
+  
+}
