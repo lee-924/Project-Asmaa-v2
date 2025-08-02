@@ -1,9 +1,9 @@
 let arm = [
   {
-        "memory": "*blur*",
+        "memory": "your grandma passed away",
         "time": "18:57",
         "date": "2025-02-20",
-        "disc": "well maybe you can tell by the date but if you cant then dont bother..."
+        "disc": "It was my first time dealing with someone who actually had their closest person pass away, so my reaction to it might not have been good, I apologize for that. I hope she makes it to heaven ameen."
     }, 
   {
         "memory": "200 days completed.",
@@ -30,10 +30,10 @@ let arm = [
         "disc": "hehehe...it was very unexpected tbh 😭 idk what even happened in those two weeks lol. also now you should know what does \"stop beating around the bush\" means in the poem 😝"
     },
     {
-        "memory": "*blur*",
+        "memory": "Breakup with bush",
         "time": "17:13",
         "date": "2025-05-23",
-        "disc": "uhh i can give a hint...you stopped beating around the bush. "
+        "disc": "you stopped beating around the bush. "
     },
     {
         "memory": "Introduction to nishy",
