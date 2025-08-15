@@ -14,3 +14,4 @@ close2.addEventListener('click',() => {
    
 })
 })
+

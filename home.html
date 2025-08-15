@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <link rel="stylesheet" href="CSS files/home.css" />
     <link rel="stylesheet" href="CSS files/homebutton.css" />
   </head>
@@ -229,6 +232,11 @@ Quack Quack 🦆🦆
       </div>
     </main>
     <div class="settingDiv">
+      <label class="switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider">lol</span>
+      </label>
+
       <pre class="setyap">
 uhh didnt really had time to add anything here
 will add something later 😭😭</pre
@@ -240,4 +248,12 @@ will add something later 😭😭</pre
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   <script src="JS files/homebutton.js"></script>
   <script src="JS files/home.js"></script>
+  <!-- <script>
+    const ahah = document.getElementById('themeToggle');
+    ahah.addEventListener('change', () => {
+      let body = document.querySelector('body');
+      body.style.backgroundImage = 'radial-gradient(#5b0101,#280101)'';
+
+    });
+  </script> -->
 </html>
