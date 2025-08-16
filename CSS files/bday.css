@@ -10,19 +10,26 @@
 body {
     background-image:radial-gradient(#410B13,#390303);
     height: auto;
+    width:100vw;
 }
 body::-webkit-scrollbar {
   display: none;                /* For Chrome, Edge, Safari */
 }
 
+
+
+
+
 /* HEADER AREA */
 
 header {
+    height:20vh;
+    width:100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
+    margin-top: 30px;
 }
 .bdaybox {
     display: flex;
@@ -51,6 +58,7 @@ main {
 .blackbox {
     margin:10px;
     padding:50px;
+    height:auto;
     width: 100vw;
     background-color: #150909;
     border-radius: 50px;
@@ -61,12 +69,12 @@ main {
     align-items: center;
     animation-name: expand;
     animation-play-state: paused;
-    animation-duration: 25s;
+    animation-duration: 28s;
     animation-fill-mode: forwards;
 }
 @keyframes expand {
     0% {height:60vh;}
-    90%{height:500vh;}
+    50%{height:250vh;}
     100%{height:auto;}
     
 }
@@ -147,6 +155,7 @@ footer {
     margin-top: 100px;
     display: flex;
     justify-content: center;
+  
 }
 .foot {
 display: none;
@@ -158,5 +167,39 @@ font-weight: 500;
 }
 
 .preFoot {
-    line-height: 30px;
+    line-height: 6vh;
+    font-family: monospace;
+}
+
+@media (max-width: 900px) {
+.blackbox {
+    margin:10px;
+    height:100vh;
+    width: 70vw;
+    font-size: 3vw;
+}
+
+.reveal {
+    width:80vw;
+}
+
+.title {
+    font-size: 6vw;
+    font-style: bold;
+}
+
+.poem {
+    font-size: 5vw;
+}
+
+.preFoot {
+    line-height: 3vh; }
+
+.foot {
+    font-size: 3vw;
+}
+
+.loading {
+    font-size: 2vh;
+}
 }

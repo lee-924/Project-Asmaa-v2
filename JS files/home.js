@@ -21,9 +21,24 @@ function close(creditdiv) {
     close.addEventListener('click',() => {
     creditdiv.style.display = 'none';  })}
 
-    
+
+
+let body = document.querySelector('body')
+let boxes = document.querySelectorAll('.box')
 let fuck = document.getElementById('themeToggle');
 fuck.addEventListener('change', () => {
-    console.log('change')
-  document.body.classList.toggle('dark-theme');
+    if (fuck.checked) {
+  body.style.backgroundImage = 'radial-gradient(#5b0101,#280101)';
+  boxes.forEach((ind) => {
+    ind.style.backgroundColor = '#6d0101'
+  })   
+
+}
+    else { 
+        body.style.backgroundImage = 'radial-gradient(#0c0269,#07004d)'
+        boxes.forEach((ind) => {
+            ind.style.backgroundColor = '#0c0269'
+        })
+   
+    }
 });

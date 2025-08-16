@@ -67,4 +67,18 @@ yapping.forEach((text, i) => {
 });
 
 }
+let updateDiv = document.querySelector('.update')
+let updateBtn = document.querySelector('.updateBtn')
+updateBtn.addEventListener('click', () => {
+    updateDiv.style.display = 'flex';
+})
+let cancel = document.querySelector('.cancel')
+cancel.addEventListener('click', () => {
+    updateDiv.style.display = 'none'
+})
+
+let skip = document.querySelector('.skip')
+skip.addEventListener('click',() => {
+    window.location.href = 'home.html'
+})
 

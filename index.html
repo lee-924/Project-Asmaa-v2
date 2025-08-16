@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Welcome</title>
     <link rel="stylesheet" href="CSS files/intro.css" />
   </head>
@@ -20,7 +23,10 @@
       </div>
       <div class="inputdiv">
         <input type="text" class="password empty" placeholder="Enter code:" />
-        <button class="confirm">confirm</button>
+        <div class="btnDiv">
+          <button class="confirm">confirm</button>
+          <button class="confirm skip">skip</button>
+        </div>
       </div>
     </main>
     <div class="creditdiv">
@@ -42,6 +48,20 @@
         Hope you enjoy this !!
       </p>
       <button class="close">close</button>
+    </div>
+    <button class="updateBtn">Update 1.1</button>
+    <div class="update">
+      <button class="cancel">X</button>
+      <p class="updateTitle">✨NEW UPDATE✨</p>
+      <p class="updateDisc">
+        <u>New features includes:</u> <br />
+        <br />
+        => Red theme on home page. <br />
+        <br />
+        => You can use it smoothly on mobile now!!! <br />
+        <br />
+        => New game: Tap Counter!!
+      </p>
     </div>
     <audio class="startAudio" src="audio/Button.wav"></audio>
     <script src="JS files/intro.js"></script>

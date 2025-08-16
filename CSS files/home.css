@@ -108,7 +108,7 @@ main {
 
 /* DIVS AND ICONS  GENERAL !! */
 a, .icon-text {
-    background-color:#0c0269 ;
+    background-color:transparent ;
     text-transform: capitalize;
     text-decoration: none;
     font-family: 'Share Tech Mono', monospace;
@@ -130,7 +130,7 @@ a {
 .svg-icon {
     height: 50px;
     width: 50px;
-    background-color:#0c0269 ;
+    background-color:transparent ;
     margin: 5px;
     
 }
@@ -146,44 +146,41 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: #0c0269;
 }
 
 .box :hover {
-    border: solid  #0c0269 ;
+    border:2px solid  #0c0269 ;
 }
 
 
 #box1 {
     grid-area: ab;
-    background: #0c0269;
 }
 
 
 
 #box2{
     grid-area: cd;
-    background: #0c0269;
 }
 
 #box3 {
     grid-area: ef;
-    background: #0c0269;
+
 }
 #box4 {
      grid-area: gh;
-    background: #0c0269;
 }
 #box5 {
      grid-area: ij;
-    background: #0c0269;
+
 }
 #box6 {
      grid-area: kl;
-    background: #0c0269;
+
 }
 #box7 {
      grid-area: op;
-    background: #0c0269;
 }
 
 
@@ -199,22 +196,29 @@ a {
 }
 .credityap {
     position: absolute;
-    top: 80px;
-    margin: 10px;
+    top: 50%;
+    left:50%;
+    width:80%;
+    transform: translate(-50%,-50%);
     text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 .creditdiv {
     display: none;
     position: fixed;
-    top: 35%;
-    left:35%;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
     padding:15px;
     background-color: black;
     border: 2px solid white;
     border-radius: 10px;
     height: 300px;
     width: 500px;
+    font-family: monospace;
 }
 
 .close {
@@ -222,6 +226,7 @@ a {
     height: 20px;
     width: 80px;
     margin: 5px;
+    top:0px;
     right:0px;
     background-color: rgb(195, 2, 2);
     border: 1px solid white;
@@ -234,6 +239,7 @@ a {
     cursor: pointer;
 }
 
+/* PHONE AREA |||  */
 @media (max-width: 900px) {
     body {
         height:auto;
@@ -256,7 +262,7 @@ a {
     main {
     margin-top:10px;
   
-    height: 850vh;
+    height: auto;
     width: 100vw;
     display:flex;
     flex-direction: column;
@@ -284,7 +290,7 @@ a {
 .container {
     padding:0px;
     margin:0px;
-    height: 800vh;
+    height: auto;
     width: 80vw;
     border-top: transparent;
     display:grid;
@@ -299,15 +305,29 @@ a {
     'gh'
     'ij'
     'kl'
-    'op';
-}
+    'op'; }
 
-.credit {
-    display:none;
-}
-}
 
-body.dark-theme {
-  background-image: #000000;
-  color: #0ff;
+.creditdiv {
+    height: 30%;
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 70%;
+    line-height: 150%;
+} }
+
+.redMode {
+    position:absolute;
+    top:20%;
+    margin-left:20px;
+    display:flex;
+    flex-direction: row;
+    font-family: monospace;
+    font-size: large;
+}
+.red {
+margin-right: 20px
 }

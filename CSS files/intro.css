@@ -67,13 +67,17 @@ main {
   padding: 10px;
 }
 
+.password:focus {
+  border:3px solid white;
+}
 .confirm {
   color: black;
   margin: 30px;
   width: 120px;
   height: 40px;
-  background-color: #53dd6c;
+  background-color: #29b743;
   border-radius: 10px;
+  border:2px solid white;
 }
 .confirm:hover {
   cursor: pointer;
@@ -208,8 +212,9 @@ main {
 .creditdiv {
   display: none;
   position: fixed;
-  top: 30%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   background-color: black;
   border: 2px solid white;
   border-radius: 10px;
@@ -235,4 +240,85 @@ main {
   border: 2px solid white;
   background-color: black;
   cursor: pointer;
+}
+
+.skip {
+  background-color: rgb(151, 2, 2);
+}
+
+.skip:hover {
+  background-color: red;
+}
+
+.update {
+  border:2px solid white;
+  border-radius: 5px;
+  z-index:1;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: black;
+  height:30vh;
+  width:80vw;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+
+ 
+}
+
+.updateTitle, .updateDisc {
+  background-color: black;
+}
+.updateTitle {
+  text-align: center;
+  margin-bottom:2vh;
+}
+.updateDisc {
+  text-align: left;
+  margin:20px;
+}
+
+.cancel {
+  background-color: red;
+  height:30px;
+  width:30px;
+  border:2px solid white;
+  margin:5px;
+  border-radius: 50%;
+  position: fixed;
+  right:0px;
+  top:0px;
+}
+
+.updateBtn {
+  position: fixed; 
+  top:0px;
+  left:0px;
+  margin:20px;
+  height: 30px;
+  width:100px;
+  background-color: #511ed2;
+  border:2px solid white;
+  border-radius: 10px;
+  color:white;
+
+}
+
+@media (max-width: 900px) {
+    .pfp {
+      margin-top:20px;
+        height:80px;
+        width:80px; }
+    .password {
+      height:4vh;
+      width: 80vw;}
+      .load {
+          animation-name: none
+      }
+      .creditdiv {
+        height:65vh;
+        width:80vw;
+      }
 }

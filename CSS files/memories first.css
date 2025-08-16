@@ -13,6 +13,7 @@ body {
    background: radial-gradient(#013170,#03045e) ;
     position : relative;
     height: 100%;
+    width:100vw;
 } 
 
 /* HEADER AREA ||| */
@@ -48,6 +49,7 @@ header {
     top: 120px;
     width: 80%;
     text-align: center;
+    font-family: 'Exo 2';
 }
 
 
@@ -123,8 +125,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-
 }
 .right p.memory {
 padding-left: 10px;
@@ -255,12 +255,14 @@ footer {
 .lk {
     position:fixed;
     color:rgb(255, 255, 255);
+    background-color: #013170;
     margin:30px;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 5px;
     padding: 5px;
     text-decoration: none;
     font-size:13px;
+    z-index: 1;
 }
 
 .f {
@@ -270,7 +272,7 @@ footer {
 
 .s {
     top:0px;
-    left:150px;
+    right:50px;
 }
 
 .lk:hover {
@@ -278,4 +280,83 @@ footer {
     border: 2px solid white;
     font-weight: 600;
   
+}
+
+@media (max-width: 950px) {
+ header {
+    position: relative;
+    min-height:65vh;
+ }
+.line {display:none;}
+ main {
+    position:relative;
+    width:100vw;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns:80vw;
+    grid-auto-rows: 15vh ;  
+    grid-gap: 10px;
+    grid-template-areas:
+     "a1"
+     "b2"
+     "c1"
+     "d2"
+     'e1'
+     'f2'
+     'g1'
+     'h2'
+     'i1'
+     'j2'
+     'k1'
+     'l2'
+     'm1'
+     'n2'
+     'o1'
+
+ }
+
+ .mem {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 10px;;
+ }
+
+
+ .memory {
+    text-align: center;
+    align-self: center;
+    padding:0px;
+    margin:0px;
+ }
+
+ .right {
+    position: absolute;
+    width:80%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+
+   
+}
+
+.left {
+    position: absolute;
+    width:80%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.left p.time {
+     align-self: center;
+}
+
+.popup {
+    height:30vh;
+    width:80vw;
+}
 }
