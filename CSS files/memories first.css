@@ -18,36 +18,36 @@ body {
 
 /* HEADER AREA ||| */
 header {
-    height: 500px;
+    height: auto;
+    width:100vw;
+    margin-top:15px;
+    margin-bottom:20px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
   
 }
 .introduction {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 .title { 
+    height:auto;
+    width:auto;
     font-size: 30px;
     font-weight: 650;
     color: white;
     font-family: "Playpen Sans Arabic", cursive;
-    position: absolute;
-    top: 50px
 }
 .title:hover {
     text-decoration: underline;
 }
 
 .discription {
-    position: absolute;
     color: white;
-    top: 120px;
-    width: 80%;
+    width: auto;
     text-align: center;
     font-family: 'Exo 2';
 }
@@ -283,9 +283,22 @@ footer {
 }
 
 @media (max-width: 950px) {
+    .introduction {
+        width: 90vw;
+        height:auto;
+    }
+    .phoneDiv {
+        width: 100vw;
+        height:80px;
+        padding:0px;
+        margin:0px;
+        background-color: transparent;
+        color:transparent;
+    }
+
  header {
     position: relative;
-    min-height:65vh;
+    height:auto;
  }
 .line {display:none;}
  main {
@@ -322,15 +335,20 @@ footer {
     justify-content: center;
     align-items: center;
     border: 2px solid white;
-    border-radius: 10px;;
+    border-radius: 10px;
+    padding:15px;
+
  }
 
-
- .memory {
+.mem p.time {
+    font-size: 3vw;
+}
+.mem  p.memory {
     text-align: center;
     align-self: center;
     padding:0px;
     margin:0px;
+    font-size: 3vw;
  }
 
  .right {
