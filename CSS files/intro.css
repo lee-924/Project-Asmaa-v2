@@ -259,7 +259,7 @@ main {
   left:50%;
   transform: translate(-50%,-50%);
   background-color: black;
-  height:30vh;
+  height:auto;
   width:80vw;
   display: none;
   flex-direction: column;
@@ -292,6 +292,11 @@ main {
   top:0px;
 }
 
+.cancel:hover {
+  cursor:pointer;
+  background-color: darkred;
+}
+
 .updateBtn {
   position: fixed; 
   top:0px;
@@ -304,6 +309,11 @@ main {
   border-radius: 10px;
   color:white;
 
+}
+
+.updateBtn:hover {
+  cursor:pointer;
+  background-color: #180056;
 }
 
 @media (max-width: 900px) {
