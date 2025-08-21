@@ -386,3 +386,30 @@ function COMPLETED() {
     window.location.href = "congrats.html";
     console.log('COMPLETED')
 }
+
+let realOrder = 25413
+let order = document.querySelector('.OrderPuzzle');
+function OrderClick() {
+    let order = document.querySelector('.OrderPuzzle').value;
+    return Number(order)
+}
+
+let confirmOrder = document.querySelector('.PhoneOrder')
+confirmOrder.addEventListener('click', () => {  
+    console.log(OrderClick())
+    let Order = OrderClick()
+        if (Order === realOrder) {
+        order.value =''
+        CorrectSound()
+        score[1].comp = true;
+        store(score)
+    }
+    else {
+        alert("wrong order")
+        tries += 1
+        if (tries === 3) {
+            failed()
+            tries = 0;
+        }
+    }
+})

@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Game</title>
     <link rel="stylesheet" href="CSS files/game.css" />
     <link rel="stylesheet" href="CSS files/homebutton.css" />
@@ -49,12 +52,15 @@
     </header>
 
     <main>
-      <pre class="startThing">
-Hey Asmaa, check out this game that I made!!
-Its just a game that will take you on a tour with the memories we made.
-I am sure nothing will go wrong after you click the start button...maybe.
-Hope you like it 😝😝
-      </pre>
+      <p class="startThing">
+        Hey Asmaa, check out this game that I made!! <br />
+        Its just a game that will take you on a tour with the memories we made.
+        <br />
+        I am sure nothing will go wrong after you click the start
+        button...maybe. <br />
+        <br />
+        Hope you like it 😝😝
+      </p>
 
       <button class="startBtn">Start</button>
       <div class="loadingScreen">.</div>
@@ -63,19 +69,21 @@ Hope you like it 😝😝
       </div>
       <div class="popup">
         <div class="popupDiv">
-          <pre class="popupTitle">MEMORY ERROR OCCURRED!</pre>
-          <pre class="popupYap">
-Oh no !!   an error has occurred.
-Some of the memories of you and lee made has been corrupted 😨
-there is only ONE way to restore it !!
-
-you must help by answering some questions
- about your friendship with lee.
-or else...all the memories will be gone....forever. 
-        </pre
-          >
-          <button class="closePopup Btn">cancel</button>
-          <button class="accept Btn">Accept</button>
+          <p class="popupTitle">MEMORY ERROR OCCURRED!</p>
+          <p class="popupYap">
+            Oh no !! an error has occurred. <br />
+            Some of the memories of you and lee made has been corrupted 😨
+            <br />
+            there is only ONE way to restore it !! <br />
+            <br />
+            you must help by answering some questions <br />
+            about your friendship with lee. <br />
+            or else...all the memories will be gone....forever. <br />
+          </p>
+          <div class="skipBtn">
+            <button class="closePopup Btn">cancel</button>
+            <button class="accept Btn">Accept</button>
+          </div>
         </div>
       </div>
     </main>

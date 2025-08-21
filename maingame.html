@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>MemoryRecovery</title>
     <link rel="stylesheet" href="CSS files/maingame.css" />
     <link rel="stylesheet" href="CSS files/homebutton.css" />
@@ -110,7 +113,14 @@
               alt="lol"
             />
             <p class="g">you have 3 tries only.</p>
+            <div class="phoneDiv">
+              <textarea
+                class="OrderPuzzle"
+                placeholder="type order here"
+              ></textarea>
+            </div>
             <button class="finalOrder">Confirm</button>
+            <button class="PhoneOrder">Confirm Order</button>
           </div>
         </section>
 
@@ -128,13 +138,13 @@
             <p class="g">ONE TRUTH TWO LIES. SELECT THE TRUTH</p>
             <p class="g result4"></p>
             <button class="truthBtn falsy">
-              Its been 7 months since we have been friends.
+              <p>Its been 7 months since we have been friends.</p>
             </button>
             <button class="truthBtn falsy">
-              The "cray cray" joke was made by me
+              <p>The "cray cray" joke was made by me</p>
             </button>
             <button class="truthBtn truth">
-              This friendship will never end.
+              <p>This friendship will never end.</p>
             </button>
           </div>
         </section>
@@ -176,16 +186,15 @@ will add something later 😭😭</pre
     </div>
     <section>
       <div class="reset">
-        <pre class="resetYap">
-MEMORY RECOVERY FAILED!!
-
-
-You have entered a wrong piece of memory.
-This will completley corrupt the full memory file.
-you have to complete the entire thing again.
-you may try again...but be more careful!
-</pre
-        >
+        <p class="resetYap">
+          MEMORY RECOVERY FAILED!! <br />
+          <br />
+          <br />
+          You have entered a wrong piece of memory. <br />
+          This will completley corrupt the full memory file. <br />
+          you have to complete the entire thing again. <br />
+          you may try again...but be more careful! <br />
+        </p>
         <button class="restart">restart</button>
       </div>
     </section>

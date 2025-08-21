@@ -23,6 +23,7 @@ main {
     position: relative;
     top:100px;
     border: 2px solid white;
+    border-radius: 5px;
 }
 
 .title {
@@ -76,7 +77,6 @@ color:black
 }
 .bar {
     position: absolute;
-    
     height: 30px;
     width: 400px;
     background-color: rgba(121, 120, 120, 0.187);
@@ -105,7 +105,6 @@ transition: width 2s ease-in-out;
 }
 
 .sec1 {
-   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -380,3 +379,85 @@ align-items: center;
     color:white;
     cursor: pointer }
 
+ .PhoneOrder, .OrderPuzzle { 
+    display:none; }
+
+
+@media (max-width: 900px) {
+
+    .phoneDiv {
+        height:10vh;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .finalOrder {
+        display:none;
+    }
+    .OrderPuzzle {
+        display:block;
+        height:20px;
+        width:50%;
+        padding:2px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .PhoneOrder {
+    display:block;
+    width:50%;
+    height:30px;
+    background-color: rgb(22, 211, 19);
+    border:2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    position: absolute;
+    left:50%;
+    bottom:0;
+    transform: translate(-50%,-50%);  
+    }
+    .barBox {
+        height:8vh;
+        width: 65vw;
+        margin:0px;
+        position: fixed;
+        top:5vh;
+        left:50%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+    }
+
+    .gameArea {
+        display:flex; 
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height:auto;
+    }
+    .bar {
+        width:65vw;
+        background-color: #333;
+    }
+    .sec1, .sec2, .sec3, .sec4, .sec5 {
+        border:2px solid green;
+        width: 90vw;
+    }
+    .img {
+        height:10vh;
+        width: 10vh;
+    }
+    .first, .puzzle, .guessing, .truthAndLie {
+        width:90vw;
+    }
+    .Btn {
+        width: 20vw;
+    }
+    .truthBtn {
+        width: 90%;
+        height:auto;
+        padding:5px;
+    }
+
+    .reset {
+        width:90vw;
+    }
+
+}

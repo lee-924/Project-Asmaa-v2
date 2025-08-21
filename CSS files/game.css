@@ -11,7 +11,7 @@
 body {
     color: white;
     background-color: #121113;
-    height: 700vh;
+    height: auto;
 
 }
 
@@ -21,7 +21,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 3vh;
+    text-decoration: underline;
 }
 
 /* MAIN BODY */
@@ -33,7 +34,7 @@ main {
 
 .startThing {
     font-family: 'VT323' ;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     line-height: 30px;
 }
@@ -78,7 +79,7 @@ main {
 .popup {
     display: none;
     background: black;
-    height:300px;
+    height:40vh;
     width:500px;
     border-radius:10px;
     border: 2px solid white;
@@ -86,34 +87,36 @@ main {
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
+    padding:2vw;
 
 }
 .popupDiv {
-    position:relative;
-    height:300px;
+    position:absolute;
+    height:auto;
     width:500px; 
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
 }
 .popupTitle {
-    position:absolute;
-    left:50%;
-    transform: translate(-50%,-50%);
+    width:100%;
+    text-align: center;
     margin: 20px;
 }
 .popupYap {
-    position:absolute;
-    top:50px;
-    left:5px;
+    width: 100%;
+    text-align: center;
     margin: 10px;
     font-size: 13px;
     text-align: center;
     line-height: 20px;
 }
 
+.skipBtn {
+    display: flex;
+    justify-content: center;
+}
 .Btn {
-    position:absolute;
     margin:10px;
     height:30px;
     width: 150px;
@@ -138,3 +141,41 @@ main {
     right: 50px;
     background: green;
 }
+
+@media (max-width: 900px) {
+ .startThing {
+    width:90vw;
+font-size: 2vh; 
+}
+
+ .popup {
+    display: none;
+    background: black;
+    height:40vh;
+    width:90vw;
+    border-radius:10px;
+    border: 2px solid white;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+} 
+
+.popupDiv {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:90%;
+    width:90%; 
+    transform: translate(-50%,-50%);
+} 
+.Btn {
+    width: 20vw;
+    margin:20px;
+}
+.skipBtn {
+    display:flex;
+    justify-content: center;  } }
