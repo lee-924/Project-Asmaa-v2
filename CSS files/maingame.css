@@ -425,6 +425,10 @@ align-items: center;
         z-index: 1;
     }
 
+    .barText {
+        font-size: 3vw;
+    }
+
     .gameArea {
         display:flex; 
         flex-direction: column;

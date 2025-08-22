@@ -163,7 +163,7 @@ function storage() {
             if (index.comp) {
                 console.log("true")
              scorePoint += 1 }  }) 
-   bar.style.width = `${scorePoint*92}px` }
+   bar.style.width = `${scorePoint*20}%` }
 
    /* if (scorePoint === 5) {
     WINNING SCREEN HERE
