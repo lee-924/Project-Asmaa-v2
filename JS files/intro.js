@@ -10,7 +10,6 @@ confirm.addEventListener('click',() => {
     setTimeout(() => {
     window.location.href = 'home.html'
     },10000)
-    
 
     setTimeout(() => {
         let load = document.querySelector('.load');
@@ -31,6 +30,38 @@ confirm.addEventListener('click',() => {
     let wel = document.querySelector(".wel")
     wel.style.animationPlayState = "running";
     }
+
+    else if (input === "Best Friend") {
+        console.log('IT WOrked')
+        document.querySelector('.empty').value = ''
+        document.querySelector('.startAudio').play()
+        confirmclick()
+        setTimeout(() => {
+        window.location.href = 'FriendHome.html'
+        },10000)
+
+        setTimeout(() => {
+        let load = document.querySelector('.load');
+        load.style.animationPlayState = "running";
+    
+    },4000)
+
+    setTimeout(() => {
+        let asmaa = document.querySelector('.wel');
+        asmaa.innerHTML = "أسماء"
+        asmaa.style.animationName = "her";
+        asmaa.style.fontFamily = 'Noto Naskh Arabic', 'cursive';
+        asmaa.style.animationPlayState = "running";
+    },6000)
+
+    let load2 = document.querySelector('.pfp');
+    load2.style.animationPlayState = "running";
+    let wel = document.querySelector(".wel")
+    wel.style.animationPlayState = "running";
+    }
+    
+    
+
     else {
         alert("Wrong password")
         document.querySelector('.empty').value = '';
@@ -79,6 +110,6 @@ cancel.addEventListener('click', () => {
 
 let skip = document.querySelector('.skip')
 skip.addEventListener('click',() => {
-    window.location.href = 'home.html'
+    window.location.href = 'FriendHome.html'
 })
 
