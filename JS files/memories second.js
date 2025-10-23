@@ -69,7 +69,7 @@ let arm = [
         "memory": "Project Completed",
         "time": "23:00",
         "date": "2025-10-23",
-        "disc": `One of the best experience of my life and I am sure, it was for you as well. But every good thing remains good when it comes to an end. Thank you for being the reason for this amazing journey. I hope I gave you something worth remembering. One last goodbye from your one and only <span class='s'> Lee</span>`
+        "disc": `One of the best experience of my life and I am sure, it was for you as well. But every good thing remains good when it comes to an end. Thank you for being the reason for this amazing journey. I hope I gave you something worth remembering. One last goodbye from your one and only <span class='lee'> Lee</span>`
     }
     
 ]
