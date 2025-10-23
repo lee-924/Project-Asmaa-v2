@@ -15,3 +15,25 @@ close2.addEventListener('click',() => {
 })
 })
 
+
+let pass = JSON.parse(localStorage.getItem('pass'))
+console.log(pass)
+
+let homeBtn = document.querySelector('.home')
+
+if (pass==='Asmaa') {
+    homeBtn.addEventListener('click',() => {
+        window.location.href = 'home.html'
+    })
+}
+
+else if (pass==='Bsf') {
+    homeBtn.addEventListener('click', () => {
+    window.location.href = 'FriendHome.html'
+} )}
+
+let introBtn = document.querySelector('.introBtn')
+introBtn.addEventListener('click',() => {
+    localStorage.removeItem('pass');
+    console.log('cleared')
+})

@@ -184,7 +184,3 @@ jumpHundred.addEventListener("click", () => {
   click(count, hundreds);
 });
 
-let home = document.querySelector(".home");
-home.addEventListener("click", () => {
-  window.location.href = "home.html";
-});

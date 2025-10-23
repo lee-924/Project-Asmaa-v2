@@ -1,9 +1,21 @@
+let int = document.querySelector('.password')
+int.addEventListener('keydown', (keyName) => {
+    if (keyName.key === 'Enter') {
+        let input = document.querySelector('.empty').value;
+        ConfirmFunction(input)
+    }
+})
+
 let confirm = document.querySelector(".confirm")
 confirm.addEventListener('click',() => {
-    let input = document.querySelector('.empty').value;
-    
+    let input = document.querySelector('.empty').value; 
+    ConfirmFunction(input)} )
 
+
+function ConfirmFunction(input) {
     if (input === "Asmaa") {
+    let pass = 'Asmaa'
+    localStorage.setItem('pass',JSON.stringify(pass))
     document.querySelector('.empty').value = ''
     document.querySelector('.startAudio').play()
     confirmclick()
@@ -32,7 +44,10 @@ confirm.addEventListener('click',() => {
     }
 
     else if (input === "Best Friend") {
-        console.log('IT WOrked')
+        let pass = 'Bsf'
+        localStorage.setItem('pass',JSON.stringify(pass))
+
+
         document.querySelector('.empty').value = ''
         document.querySelector('.startAudio').play()
         confirmclick()
@@ -67,7 +82,9 @@ confirm.addEventListener('click',() => {
         document.querySelector('.empty').value = '';
     }
    
-    }) 
+    } 
+
+    
 
 let credit = document.querySelector('.info')
 credit.addEventListener('click', () => {
@@ -110,6 +127,9 @@ cancel.addEventListener('click', () => {
 
 let skip = document.querySelector('.skip')
 skip.addEventListener('click',() => {
+    let pass = 'Bsf'
+        localStorage.setItem('pass',JSON.stringify(pass))
     window.location.href = 'FriendHome.html'
 })
+
 

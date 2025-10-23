@@ -1,4 +1,12 @@
-
+let ps = JSON.parse(localStorage.getItem('pass'))
+let boxy = document.querySelector('.bx5')
+if (ps==='Bsf') {
+    if (window.innerWidth<900) {
+    boxy.id= 'box4' }
+    else {
+    boxy.id = 'box5'
+    }
+}
 
 function updateTime() {
 
@@ -68,3 +76,9 @@ else if (theme === 'blue') {
 }
 
 
+let friendbtn = document.querySelector('.FriendModeBtn')
+friendbtn.addEventListener('click',() => {
+    let pss = 'Bsf'
+    localStorage.setItem('pass',JSON.stringify(pss))
+    window.location.href = 'FriendHome.html'
+})

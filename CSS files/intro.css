@@ -330,5 +330,7 @@ main {
       .creditdiv {
         height:65vh;
         width:80vw;
+        overflow-y: auto;
+        overflow-x: hidden;
       }
 }

@@ -331,3 +331,17 @@ a {
 .red {
 margin-right: 20px
 }
+
+.FriendModeBtn {
+    background-color: rgb(72, 2, 119)  ;
+    color: #ffffff;
+    border:2px solid white;
+    border-radius: 10px;
+    margin: 5px;
+    padding:3px;
+}
+
+.FriendModeBtn:hover {
+    cursor:pointer;
+    background-color: rgb(33, 31, 31);    
+}
